@@ -1,0 +1,487 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Yeseva One', sans-serif;
+
+}
+
+header {
+
+    background-image: url('../images/1.png');
+    min-height: 400px;
+    padding: 30px 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2%;
+
+
+}
+
+.logo {
+
+    position: relative;
+    background-image: url('../images/avi.png');
+    z-index: 2;
+    background-size: 100% 100%;
+    width: 75px;
+    height: 70px;
+    float: left;
+
+}
+
+.menu-desktop {
+    float: right;
+
+}
+
+.menu-desktop ul {
+
+    list-style: none;
+
+}
+
+.menu-desktop li {
+
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav.menu-desktop a {
+
+    color: black;
+    text-decoration: none;
+    font-size: 21px;
+    font-weight: bold;
+    font-family: 'Comfortaa', cursive;
+    font-family: 'Ysabeau SC', sans-serif;
+}
+
+.menu-mobile {
+    float: right;
+    display: none;
+}
+
+.menu-mobile ul {
+
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 70px 0 30px 0;
+    display: none;
+    text-align: center;
+    background-color: rgba(4, 4, 4, 0.6);
+}
+
+.menu-mobile i {
+
+    position: relative;
+    z-index: 2;
+}
+
+.menu-mobile a {
+
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    font-size: 21px;
+}
+
+.menu-mobile li {
+
+    padding: 10px 0;
+}
+
+.chamada {
+
+    padding: 150px 0;
+}
+
+.chamada h2 {
+
+    color: black;
+    font-size: 40px;
+    font-family: 'Comfortaa', cursive;
+    font-family: 'Ysabeau SC', sans-serif;
+}
+
+.chamada p {
+
+    color: black;
+    font-size: 15px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.chamada form {
+    
+    margin-top: 15px;
+}
+
+.chamada input[type="email"]:focus {
+    outline: 0;
+}
+
+.chamada input[type="email"] {
+    width: 300px;
+    height: 41px;
+    border-radius: 100px;
+    background-color: rgba(1, 1, 1, 0.6);
+    border: 0;
+    font-size: 15px;
+    padding-left: 10px;
+    font-family: 'Ysabeau SC', sans-serif;
+}
+
+.chamada input[type="email"]::placeholder {
+
+    color: white;
+}
+
+.chamada input[type="submit"] {
+
+    width: 180px;
+    height: 41px;
+    border-radius: 100px;
+    background-color: rgba(1, 1, 1, 0.6);
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+    font-size: 15px;
+    font-family: 'Ysabeau SC', sans-serif;
+}
+
+.container input[type="submit"] {
+
+    width: 180px;
+    height: 41px;
+    border-radius: 100px;
+    background-color: rgba(114, 102, 112, 0.824);
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+    font-size: 15px;
+    font-family: 'Ysabeau SC', sans-serif;
+
+}
+
+
+
+
+.descricao {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.descricao p {
+
+    font-size: 25px;
+    font-family: 'Ysabeau SC', sans-serif;
+    font-weight: bold;
+}
+
+.descricao b {
+    color: rgba(114, 102, 112, 0.824);
+    font-size: 27px;
+}
+
+.texto-descricao {
+    padding: 0 15px;
+    float: left;
+    width: 50%;
+}
+
+.texto-descricao h3 {
+    color: rgba(114, 102, 112, 0.824);
+    font-size: 25px;
+    line-height: 33px;
+    margin-top: 25px;
+}
+
+.texto-descricao p {
+
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.descricao2 img {
+
+    width: 40%;
+    float: left;
+}
+
+.clear {
+
+    clear: both;
+}
+
+.descricao3 {
+
+    padding: 30px 0 70px;
+}
+
+.descricao3 .container {
+
+    background-image: url('../images/México.jpeg');
+    background-size: cover;
+    position: relative;
+    min-height: 350px;
+
+}
+
+.depoimento {
+
+    position: absolute;
+    background-color: #fff;
+    left: 60%;
+    bottom: -30px;
+    max-width: 507%;
+    padding: 40px;
+    box-shadow: 0 8px 20px rgba(51, 45, 45, 0.8);
+    font-family: 'Ysabeau SC', sans-serif;
+}
+
+servicos {
+    margin-top: 130px;
+}
+
+.depoimento b {
+
+    font-size: 19px;
+    color: rgba(154, 110, 141, 0.82);
+    font-family: 'Ysabeau SC', sans-serif; 
+}
+
+.titulo-servicos {
+    text-align: center;
+}
+
+.titulo-servicos h2{
+
+    font-family: 'Ysabeau SC', sans-serif; 
+}
+.combo-produtos {
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.espaco-produtos {
+
+    display: flex;
+    width: 33%;
+    padding: 35px;
+}
+
+.espaco-produtos p {
+
+    margin: 9px 0;
+}
+
+.espaco-produtos a {
+
+    display: inline-block;
+    border: 1px solid black;
+    color: #31475e;
+    font-size: 19px;
+    text-decoration: none;
+    padding: 6px 13px;
+    border-radius: 20px;
+}
+
+.imagi{
+    width: 300px;
+    height: 225px;
+}
+
+.box-produtos {
+
+    border-radius: 3px;
+    height: 100%;
+    box-shadow: 0 8px 20px rgba(110, 109, 109, 0.8);
+    padding: 5px;
+
+}
+
+.box-produtos p{
+
+    font-family: 'Ysabeau SC', sans-serif; 
+}
+
+.box-produtos h2{
+
+    font-family: 'Ysabeau SC', sans-serif; 
+}
+
+.box-produtos a{
+
+    border-color: rgba(114, 102, 112, 0.824);
+    font-family: 'Ysabeau SC', sans-serif; 
+    font-weight: bold;
+}
+
+.box-produtos h2{
+
+    color: rgba(114, 102, 112, 0.824);
+}
+
+.formulario {
+
+    padding: 30px 0;
+}
+
+.formulario h2 {
+
+    text-align: center;
+    color: rgba(154, 110, 141, 0.82) ;
+}
+
+.formulario form {
+
+    margin-top: 10px;
+}
+
+.formulario input[type=text] {
+
+    width: 100%;
+    height: 40px;
+    border-radius: 100px;
+    margin-top: 10px;
+    padding: 10px;
+
+}
+
+.formulario textarea {
+
+    width: 100%;
+    height: 130px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid gray;
+
+}
+
+footer {
+
+    margin: 50px 0;
+    border-top: 1px solid gray;
+}
+
+.box-footer {
+
+    margin: 20px 0;
+    float: left;
+    width: 33.33%;
+    padding: 0 15px;
+}
+
+.box-footer p {
+
+    margin-top: 15px;
+    font-size: 21px;
+}
+
+.box-footer input[type="text"] {
+
+    width: 80%;
+    padding-left: 10px;
+    max-width: 190px;
+    height: 45px;
+    border-radius: 100px;
+    border: 1px solid gray;
+
+}
+
+.box-footer button {
+
+    margin-left: 10px;
+    max-width: 60px;
+    height: 45px;
+    border: 1px solid blue;
+    border-radius: 50px;
+    background-color: #fff;
+    width: 70px;
+}
+
+/* Abaixo do codigo de responsividade */
+/* Definindo medidas para desktop e tablet*/
+
+@media screen and (max-width: 1024px) {
+
+    .depoimento {
+
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        bottom: auto;
+        padding: 30px;
+        width: 90%;
+        transform: translate(-50%, -50%);
+    }
+
+    .espaco-produtos {
+
+        width: 100%;
+        margin: 0 auto;
+        max-width: 400px;
+        padding: 10px;
+    }
+
+    .menu-desktop {
+
+        display: none;
+    }
+
+    .menu-mobile {
+
+        display: block;
+    }
+
+    .chamada {
+
+        text-align: center;
+    }
+
+    .chamada input[type="email"] {
+        margin-bottom: 10px;
+    }
+
+    .box-footer {
+
+        text-align: center;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+}
+
+/*Definindo medidas para celular*/
+
+@media screen and (max-width: 768px) {
+
+    .texto-descricao {
+
+        width: 100%;
+        display: block;
+        float: none;
+    }
+
+    .descricao2 img {
+
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        float: none;
+        margin-top: 10px;
+        max-width: 500px;
+    }
+
+}
