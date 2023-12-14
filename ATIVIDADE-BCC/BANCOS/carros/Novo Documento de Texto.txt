@@ -1,0 +1,113 @@
+CREATE TABLE "tb_aluguel"(
+	"aluguel_id" INTEGER,
+	"cliente_id" TEXT NOT NULL,
+	"veiculo_id" TEXT NOT NULL,
+	"data_inicio" TEXT NOT NULL,
+	"data_fim" TEXT NOT NULL,
+	PRIMARY KEY ("veiculo_id" AUTOINCREMENT)
+	FOREIGN KEY ("cliente_id") REFERENCES tb_cliente ("cliente_id")
+
+);
+
+
+
+-------------------------------------------------------------------------------
+
+
+CREATE TABLE "tb_cliente"(
+	"cliente_id" INTEGER,
+	"nome" TEXT NOT NULL,
+	"cnh" TEXT NOT NULL,
+	"telefone" TEXT NOT NULL,
+	PRIMARY KEY ("cliente_id" AUTOINCREMENT)
+
+);
+
+--------------------------------------------------------------------------------
+
+CREATE TABLE "tb_veiculo"(
+	"veiculo_id" INTEGER,
+	"modelo" TEXT NOT NULL,
+	"ano" TEXT NOT NULL,
+	"placa" TEXT NOT NULL,
+	"disponibilidade" TEXT NOT NULL,
+	PRIMARY KEY ("veiculo_id" AUTOINCREMENT)
+
+);
+
+
+-------------------------------------------------------------------------------
+
+INSERT INTO "tb_cliente" (nome, CNH, telefone) 
+VALUES
+	('João Silva', '12345678901', '12345-6789'),
+	('Maria Oliveira', '12345678902', '12345-6790'),
+	('Pedro Alves', '12345678903', '12345-6791'),
+	('Ana Pereira', '12345678904', '12345-6792'),
+	('Bruno Costa', '12345678905', '12345-6793'),
+	('Carla Martins', '12345678906', '12345-6794'),
+	('Fernando Souza', '12345678907', '12345-6795'),
+	('Gabriela Santos', '12345678908', '12345-6796'),
+	('Henrique Lima', '12345678909', '12345-6797'),
+	('Isabela Fernandes', '12345678910', '12345-6798');
+
+
+--------------------------------------------------------------------------------
+
+INSERT INTO "tb_veiculo" (veiculo_id, ano, placa, disponibilidade) 
+VALUES
+	('Fiat Uno', '2015', 'ABC-1234', 'Disponivel'),
+	('Volkswagen Gol', '2018', 'DEF-5678', 'Disponivel'),
+	('Ford Ka', '2019', 'GHI-9012', 'Disponivel'),
+	('Chevrolet Onix', '2020', 'JKL-3456', 'Alugado'),
+	('Honda Civic', '2017', 'MNO-7890', 'Disponivel'),
+	('Toyota Corolla', '2021', 'PQR-1234', 'Alugado'),
+	('Hyundai HB20', '2022', 'STU-5678', 'Disponivel'),
+	('Renault Sandero', '2016', 'VWX-9012', 'Disponivel'),
+	('Nissan Versa', '2020', 'YZA-3456', 'Disponivel'),
+	('Peugeot 208', '2018', 'BCD-7890', 'Alugado');
+
+
+--------------------------------------------------------------------------------
+
+
+INSERT INTO "tb_aluguel" (cliente_id, data_inicio , data_fim) 
+VALUES
+	('2', '2023-09-01', '2023-09-10'),
+	('3', '2023-09-03', '2023-09-17'),
+	('4', '2023-09-05', '2023-09-20'),
+	('5', '2023-09-08', '2023-09-18'),
+	('6', '2023-09-10', '2023-09-24'),
+	('7', '2023-09-12', '2023-09-26'),
+	('8', '2023-09-15', '2023-09-29'),
+	('9', '2023-09-18', '2023-09-30'),
+	('10', '2023-09-20', '2023-09-27'),
+	('1', '2023-09-22', '2023-09-28');
+
+--------------------------------------------------------------------------------
+
+
+//CONSULTA
+
+SELECT * FROM tb_cliente WHERE telefone = "12345-6789";
+
+SELECT * FROM tb_cliente WHERE telefone = "12345-6789";
+--------------------------------------------------------------------------------
+
+
+SELECT * FROM tb_cliente WHERE cnh = "12345678901";
+
+SELECT * FROM tb_cliente WHERE cnh = "12345678901";
+
+-------------------------------------------------------------------------------
+
+
+//UPDATE
+
+UPDATE tb_cliente
+SET cnh = "12345678901"
+WHERE cliente_id = 1;
+
+
+----------------------------------------------------------------------------------
+

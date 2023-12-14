@@ -1,0 +1,76 @@
+-----Criação de tabela-----
+CREATE TABLE "tb_passageiro" (
+	"passageiro_id"	INTEGER,
+	"cpf"	INTEGER NOT NULL,
+	"nome"	TEXT NOT NULL,
+	"data_nascimento"	TEXT NOT NULL,
+	"telefone" TEXT NOT NULL,
+	"telefone_2" TEXT,
+	"rua" TEXT NOT NULL,
+	"numero" INTEGER NOT NULL,
+	"cep" TEXT,
+	"complemento" TEXT,
+	"bairro" TEXT NOT NULL,
+	"cidade" TEXT NOT NULL,
+	"estado" TEXT NOT NULL,
+	
+	
+	PRIMARY KEY("passageiro_id" AUTOINCREMENT)
+	
+
+); 
+
+CREATE TABLE "tb_voo"(
+	"voo_id" INTEGER,
+	"origem" TEXT NOT NULL,
+	"destino" TEXT NOT NULL,
+	"numero_voo" TEXT NOT NULL,
+	"modelo_voo" TEXT NOT NULL,
+	PRIMARY KEY ("voo_id" AUTOINCREMENT)
+	
+
+	
+);
+
+CREATE TABLE "tb_reserva"(
+	"voo_id" INTEGER NOT NULL,
+	"passageiro_id" INTEGER NOT,
+	"numero_assento" TEXT NOT NULL,
+	
+	FOREIGN KEY ("voo_id") REFERENCES tb_voo ("voo_id"),
+	FOREIGN KEY ("passageiro_id") REFERENCES tb_passageiro ("passageiro_id")
+	
+	
+
+	
+);
+
+-----Inserir Dados-----
+
+INSERT INTO tb_passageiro (nome, telefone, rua, numero, complemento, cep, bairro, cidade, estado, cpf, data_nascimento, telefone, telefone_2)
+VALUES
+    ('Pedro Almeida', '7777-8888', 'Rua D', 1010, 'Apto 5', '55555-444', 'Jardim Primavera', 'Porto Alegre', 'RS', 456763737, '1978/09/06', '93635-6333', '98560-34563' ),
+    ('Ana Souza', '3333-2222', 'Rua E', 222, 'Casa 7', '22222-333', 'Centro', 'Curitiba', 'PR', 436637338, '1987/04/23', '96935-6333', '99520-34583'),
+    ('Carlos Lima', '5555-4444', 'Rua F', 4567, 'Sala 10', '98765-432', 'Bairro Novo', 'Belo Horizonte', 'MG', 377373636, '1980/12/01', '97895-67893', '97760-34378'),
+    ('Mariana Costa', '2222-1111', 'Rua G', 7890, 'Casa 1', '12345-678', 'Vila Feliz', 'Rio de Janeiro', 'RJ', 267282890, '2000/05/16', '93725-69083', '92356-32673'),
+    ('Lucas Ferreira', '4444-3333', 'Rua H', 6543, 'Apto 3', '54321-876', 'Bairro Novo', 'Belo Horizonte', 'MG',67776678, '1983/03/29', '97578-67879', '97897-78988');
+
+INSERT INTO tb_voo (origem, destino, modelo_voo, numero_voo)
+VALUES
+    	('Brasil', 'Alemanha', 'Azul', 'A526G' ),
+	('EUA', 'França', 'Yellow', 'P6376' ),
+	('Suiça', 'Brasil', 'Dream', 'D3455' ),
+	('China', 'Venezuela', 'Comfort', 'W3344' ),
+	('Uruguai', 'Moçambique', 'Fantastic', 'C5365' );
+
+INSERT INTO tb_reserva (numero_assento, passageiro_id, voo_id)
+VALUES
+    		('A001', 1,1),
+		('B034', 2,2),
+		('C008', 3,3),
+		('D023', 4,4),
+		('E040',5,5);
+    
+
+
+

@@ -1,0 +1,108 @@
+//CRIAÇÃO DE TABELA
+
+
+
+CREATE TABLE "tb_cliente (
+	"cliente_id" INTEGER,
+	"nome" TEXT,
+	"CPF" TEXT,
+	"telefone" TEXT,
+	"CEP" TEXT,
+	"Rua" TEXT,
+	"cidade" TEXT,
+	"bairro" TEXT,
+	PRIMARY KEY ("cliente_id" AUTOINCREMENT)
+);
+
+--------------------------------------------------------------------------------------
+CREATE TABLE "tb_pedido"(
+	"pedido_id" INTEGER,
+	"data_de_realização" TEXT ,
+	"valor" TEXT,
+	"cliente_id" TEXT,
+	"servico_id" TEXT,
+	"pneu_id" TEXT,
+	PRIMARY KEY ("pedido_id" AUTOINCREMENT)
+	FOREIGN KEY ("cliente_id") REFERENCES tb_cliente ("cliente_id")
+	FOREIGN KEY ("servico_id") REFERENCES tb_servico ("servico_id")
+	FOREIGN KEY ("pneu_id") REFERENCES tb_pneu ("pneu_id")
+);
+
+--------------------------------------------------------------------------------------
+
+CREATE TABLE "tb_servico"(
+	"servico_id" INTEGER,
+	"nome" TEXT,
+	PRIMARY KEY ("servico_id" AUTOINCREMENT)
+);
+
+--------------------------------------------------------------------------------------
+CREATE TABLE "tb_pneu"(
+	"pneu_id" INTEGER,
+	"quantidade" NUMERIC,
+	"marca" TEXT,
+	"modelo" TEXT,
+	"dimensões" TEXT,
+	"numero_de_série" NUMERIC,
+	PRIMARY KEY ("pneu_id" AUTOINCREMENT)
+);
+
+--------------------------------------------------------------------------------------
+
+
+
+
+//POPULAR TABELA
+
+
+
+INTO "tb_cliente" (nome, CPF, telefone, CEP, Rua, bairro, cidade) 
+VALUES
+	('João Silva', '12345678901', '12345-6789', '12345-12341', 'Costa Rica', 'Polvilho', 'Santana'),
+	('Maria Oliveira', '12345678902', '12345-6790', '12345-12342', 'Linda Barreto', 'Jardim Espacial', 'Cajamar'),
+	('Pedro Alves', '12345678903', '12345-6791', '12345-12343', 'Zoodiaco', 'Guaturinho', 'Itacarambi'),
+	('Ana Pereira', '12345678904', '12345-6792', '12345-12344', 'Planeta', 'Portal do ipes', 'Boa Vista'),
+	('Bruno Costa', '12345678905', '12345-6793', '12345-12345', 'Lírios', 'fazendinha', 'Niterói');
+	
+
+
+
+------------------------------------------------------------------------------------
+
+
+
+INSERT INTO "tb_pedidos" (data_de_realização, valor) 
+VALUES
+	('10/09/2023', '100,00'),
+	('09/09/2023', '200,00'),
+	('08/09/2023', '300,00'),
+	('07/09/2023', '400,00'),
+	('06/09/2023', '500,00');
+
+-------------------------------------------------------------------------------------
+
+INSERT INTO "tb_servico" (nome) 
+VALUES
+	('alinhamento'),
+	('troca de pneu'),
+	('troca de óleo'),
+	('polimento'),
+	('mediação');
+
+----------------------------------------------------------------
+
+ INSERT INTO "tb_pneu" (quantidade, marca, modelo, dimensões, numero_de_série) 
+VALUES
+	('1', 'Toyota', 'Cruz', '111-22', '111'),
+	('2', 'Honda', 'Oxix', '222-33', '222'),
+	('3', 'BMW', 'Ferrari', '333-44', '333'),
+	('4', 'Nissan', 'Jeep', '444-55', '444'),
+	('5', 'Hyundai', 'Rodar', '555-66', '555');
+	
+
+-------------------------------------------------------------------------
+
+
+
+
+

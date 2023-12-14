@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="D:/DS_SESI/BANCO_DADOS/_db-SQLite/voo/voo.db" readonly="0" foreign_keys="" case_sensitive_like="" temp_store="" wal_autocheckpoint="" synchronous=""/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="125"/><column_width id="3" width="2906"/><column_width id="4" width="0"/></tab_structure><tab_browse><current_table name="0,0:"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1">INSERT INTO &quot;tb_cliente&quot; (nome, CPF, telefone, CEP, Rua) 
+VALUES
+	('João Silva', '12345678901', '12345-6789', '12345-12341', 'Costa Rica'
+	('Maria Oliveira', '12345678902', '12345-6790', '12345-12342', 'Linda Barreto', 'Jardim Espacial', 'Cajamar'),
+	('Pedro Alves', '12345678903', '12345-6791', '12345-12343', 'Zoodiaco', 'Guaturinho', 'Itacarambi'),
+	('Ana Pereira', '12345678904', '12345-6792', '12345-12344', 'Planeta', 'Portal do ipes', 'Boa Vista'),
+	('Bruno Costa', '12345678905', '12345-6793', '12345-12345', 'Lírios', 'fazendinha', 'Niterói');
+	</sql><current_tab id="0"/></tab_sql></sqlb_project>
